@@ -1,0 +1,521 @@
+@charset "UTF-8";
+/*初期設定*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+margin:0;
+padding:0;
+border:0;
+outline:0;
+font-size:100%;
+vertical-align:baseline;
+background:transparent;
+}
+a {
+text-decoration: none;
+}
+a:hover {
+opacity: 0.6 ;
+}
+li{
+list-style:none;
+}
+
+/*共通*/
+.forSP {
+display: none;
+}
+p{
+font-size:1.4em;
+color: #333;
+}
+h2{
+font-size: 2.0em;
+text-align: center;
+padding: 80px 0 20px;
+}
+.point{
+color: #F11F8D;
+font-weight: bold;
+}
+.point span{
+font-size: 150%;
+}
+.inner{
+width: 1200px;
+margin: 0 auto;
+}
+.applybtn{
+font-size: 1.4em;
+color:#fff;
+border-radius: 100vh;
+height: 61px;
+width: 282px;
+background-image: linear-gradient(90deg, #0271E0, #53A2F0);
+border: none;
+
+}
+.applybtn:hover {
+opacity: 0.6 ;
+}
+#section01, #section02, #section03{
+padding-bottom: 50px;
+}
+
+/*ヘッダー*/
+.header{
+position: fixed;
+top: 0; 
+left: 0; 
+width: 100%; 
+height: 60px; 
+padding: 10px; 
+background-color: #fff;
+box-shadow: 0 1px 8px #787878;
+}
+.header_nav{
+display: flex;
+position: relative;
+}
+.header .nav{
+position: absolute;
+right: 0;
+padding-top: 15px;
+}
+.header ul{
+display: flex;
+gap:30px;
+}
+.header li a{
+font-size: 1.4em;
+color:#333;
+}
+.header .nav_toggle{
+
+}
+.header .applybtn {
+width: auto;
+height: auto;
+margin-top: -10px;
+padding: 10px;
+}
+.header img{
+padding-top: 10px;
+}
+
+/*メインビジュアル*/
+main{
+padding-top: 60px;
+}
+.main_visual{
+background-image: url(../image/mainVIsual_pc.jpg);
+height: 650px;
+}
+.frame:before {
+content: url(../image/frame-left.png);
+}
+.frame:after {
+content: url(../image/frame-right.png);
+}
+.frame{
+display: flex;
+padding: 100px 0 20px;
+text-align: center;
+}
+.frame p{
+padding: 10px;
+}
+.subtitie{
+font-size: 2.0em;
+}
+.frame .point{
+font-size: 2.0em;
+}
+.main_visual h1{
+color: #005BAC;
+font-size: 4.0em;
+}
+.btnlist{
+width: 1200px;
+margin: -26px auto;
+}
+.btnlist ul{
+display: flex;
+justify-content: space-between;
+}
+.btnlist li{
+font-size: 1.4em;
+color:#fff;
+border-radius: 100vh;
+padding:10px;
+width: 340px;
+text-align: center;
+}
+.btnlist li:first-child{
+background-color: #77CB33;
+}
+.btnlist li:nth-child(2) {
+background-color: #F6AA00;
+}
+.btnlist li:last-child{
+background-color: #3AC8AD;
+}
+.btnlist li:hover {
+opacity: 0.6 ;
+}
+
+/*section01*/
+#section01 .reason,#section01 .reason2{
+display: flex;
+gap: 20px;
+padding-bottom: 20px;
+}
+#section01 .reason:last-child{
+padding-bottom: 0;
+}
+#section01 .reason img,#section01 .reason .text,#section01 .reason2 img,#section01 .reason2 .text{
+width: 50%;
+}
+#section01 h3 {
+font-size: 1.8em;
+}
+
+/*入学説明会に申し込む*/
+.apply{
+background-color: #FFEDED;
+text-align: center;
+padding: 50px 0;
+}
+.apply p{
+padding-bottom: 20px;
+}
+
+/*section02*/
+.tab-button {
+display: flex;
+justify-content: space-between;
+}
+.tab-button .is-active {
+background-color: #F2F9FF;
+color: #333;
+}
+.tab {
+width: calc(100% / 2);
+padding: 10px;
+font-weight: bold;
+font-size: 1.6em;
+text-align: center;
+}
+.tab-contents {
+background-color: #F2F9FF;
+}
+.content {
+display: none;
+}
+.content.is-display {
+display: block;
+}
+.cource, .purpose{
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+padding: 20px 0;
+row-gap: 20px;
+}
+.dli-arrow-right {
+display: inline-block;
+vertical-align: middle;
+color: #005BAC;
+position: relative;
+width: 1em;
+height: 0.1em;
+background: currentColor;
+line-height: 1;
+margin-right: 10px;
+}
+.dli-arrow-right::before {
+content: '';
+width: 0.65em;
+height: 0.65em;
+border: 0.1em solid currentColor;
+border-left: 0;
+border-bottom: 0;
+transform: rotate(45deg);
+transform-origin: top right;
+position: absolute;
+top: 50%;
+right: -0.05em;
+box-sizing: border-box;
+}
+
+/*section03*/
+#section03 table {
+border-collapse: collapse;
+margin: 0 auto;
+}
+#section03 th, #section03 td {
+border: solid 1px #707070;
+padding: 10px;
+font-size: 1.2em;
+text-align: center;
+}
+#section03 th {
+font-weight: normal;
+background-color: #F5F5F5;
+width: 141px;
+}
+#section03 th:last-child {
+width: 452px;
+}
+
+/*よくあるご質問・お近くの教室を探す*/
+.qa_classroomsFt{
+display: flex;
+position: relative;
+}
+.qaFt,.classroomsFt{
+width: 50%;
+}
+.qa_classroomsFt .qa_text{
+position: absolute;
+top: 45%;
+left: 15%;
+color: #fff;
+font-size: 1.8em;
+}
+.qa_classroomsFt .classrooms_text{
+position: absolute;
+top: 45%;
+right: 10%;
+color: #fff;
+font-size: 1.8em;
+}
+
+/*footer*/
+.footer{
+background-color: #DDD;
+padding: 20px;
+}
+.footer p{
+font-size: 1.0em;
+text-align: center;
+}
+
+/*sp
+S----------------------*/
+@media screen and (max-width:768px) {
+/*共通*/
+.forPC {
+display: none;
+}
+p{
+font-size:1.2em;
+}
+h2{
+font-size: 1.8em;
+padding: 20px 0 10px;
+}
+.inner{
+width: 100%;
+margin: auto 10px;
+}
+.applybtn{
+font-size: 1.4em;
+    border-radius: 100vh;
+    height: 61px;
+width: 70%;
+    background-image: linear-gradient(90deg, #0271E0, #53A2F0);
+    border: none;
+    
+    }
+    .applybtn:hover {
+    opacity: 0.6 ;
+    }
+    #section01, #section02, #section03{
+    padding-bottom: 50px;
+    }
+/*ヘッダー*/
+.header{
+
+height: 40px; 
+
+    }
+
+.header li a{
+font-size: 1.2em;
+}
+
+.header img{
+height: 25px;
+}
+
+/*ドロワーメニュー*/
+
+
+/*メインビジュアル*/
+.main_visual{
+background-image: url(../image/mainVIsual_sp.jpg);
+height: 250px;
+}
+.frame:before,.frame:after {
+transform: scale(0.5);
+}
+.frame{
+width: 55%;
+padding: 0;
+margin-left: -10px;
+}
+.frame p{
+padding: 50px 0 0;
+font-size: 0.6em;
+}
+.subtitie{
+font-size: 1.0em;
+margin-top: -35px;
+}
+.frame .point{
+font-size: 1.8em;
+}
+.main_visual h1{
+font-size: 1.6em;
+line-height: 1;
+}
+.btnlist{
+width: 100%;
+margin: 10px auto;
+}
+.btnlist ul{
+display: grid;
+justify-content: center;
+gap: 10px;
+}
+.btnlist li{
+font-size: 1.2em;
+width: 100%;
+}
+
+/*section01*/
+#section01 .reason{
+display: block;
+}
+#section01 .reason2{
+display: flex;
+flex-direction: column-reverse;
+}
+#section01 .reason img,#section01 .reason .text,#section01 .reason2 img,#section01 .reason2 .text{
+width: 100%;
+}
+#section01 h3 {
+font-size: 1.6em;
+}
+    
+    /*入学説明会に申し込む*/
+    .apply{
+    background-color: #FFEDED;
+    text-align: center;
+    padding: 50px 0;
+    }
+    .apply p{
+    padding-bottom: 20px;
+    }
+    
+/*section02*/
+    .tab-button {
+    display: flex;
+    justify-content: space-between;
+    }
+.tab {
+    width: calc(100% / 2);
+    padding: 10px;
+font-size: 1.4em;
+}
+    .tab-contents {
+    background-color: #F2F9FF;
+    }
+    .content {
+    display: none;
+    }
+    .content.is-display {
+    display: block;
+    }
+    .cource, .purpose{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    row-gap: 20px;
+    }
+    .dli-arrow-right {
+    display: inline-block;
+    vertical-align: middle;
+    color: #005BAC;
+    position: relative;
+    width: 1em;
+    height: 0.1em;
+    background: currentColor;
+    line-height: 1;
+    margin-right: 10px;
+    }
+    .dli-arrow-right::before {
+    content: '';
+    width: 0.65em;
+    height: 0.65em;
+    border: 0.1em solid currentColor;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(45deg);
+    transform-origin: top right;
+    position: absolute;
+    top: 50%;
+    right: -0.05em;
+    box-sizing: border-box;
+    }
+    
+/*section03*/
+#section03 table {
+margin: 0 10px;
+}
+#section03 th, #section03 td {
+font-size: 1.0em;
+} 
+
+/*よくあるご質問・お近くの教室を探す*/
+.qa_classroomsFt{
+display: block;
+    position: relative;
+}
+.qaFt,.classroomsFt{
+width: 100%;
+}
+.qa_classroomsFt img {
+width: 100%;
+}
+.qa_classroomsFt .qa_text{
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    color: #fff;
+font-size: 1.6em;
+}
+.qa_classroomsFt .classrooms_text{
+    position: absolute;
+    top: 45%;
+    right: 10%;
+font-size: 1.6em;
+}
+    
+/*footer*/
+.footer p{
+font-size: 0.8em;
+}
+
+}
