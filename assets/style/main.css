@@ -22,6 +22,7 @@ background:transparent;
 }
 a {
 text-decoration: none;
+color: inherit;
 }
 a:hover {
 opacity: 0.6 ;
@@ -70,7 +71,9 @@ opacity: 0.6 ;
 #section01, #section02, #section03{
 padding-bottom: 50px;
 }
-
+.scale-img:hover {
+transform: scale(1.2,1.2); 
+}
 /*ヘッダー*/
 .header{
 position: fixed;
@@ -95,12 +98,9 @@ padding-top: 15px;
 display: flex;
 gap:30px;
 }
-.header li a{
+.header .nav__item{
 font-size: 1.4em;
 color:#333;
-}
-.header .nav_toggle{
-
 }
 .header .applybtn {
 width: auto;
@@ -295,7 +295,7 @@ font-size: 1.8em;
 .qa_classroomsFt .classrooms_text{
 position: absolute;
 top: 45%;
-right: 10%;
+right: 15%;
 color: #fff;
 font-size: 1.8em;
 }
@@ -330,25 +330,15 @@ margin: auto 10px;
 }
 .applybtn{
 font-size: 1.4em;
-    border-radius: 100vh;
-    height: 61px;
 width: 70%;
-    background-image: linear-gradient(90deg, #0271E0, #53A2F0);
-    border: none;
-    
-    }
-    .applybtn:hover {
-    opacity: 0.6 ;
-    }
-    #section01, #section02, #section03{
-    padding-bottom: 50px;
-    }
+}
+img{
+width: 100%;
+}
 /*ヘッダー*/
 .header{
-
 height: 40px; 
-
-    }
+}
 
 .header li a{
 font-size: 1.2em;
@@ -417,69 +407,11 @@ width: 100%;
 #section01 h3 {
 font-size: 1.6em;
 }
-    
-    /*入学説明会に申し込む*/
-    .apply{
-    background-color: #FFEDED;
-    text-align: center;
-    padding: 50px 0;
-    }
-    .apply p{
-    padding-bottom: 20px;
-    }
-    
+
 /*section02*/
-    .tab-button {
-    display: flex;
-    justify-content: space-between;
-    }
 .tab {
-    width: calc(100% / 2);
-    padding: 10px;
 font-size: 1.4em;
 }
-    .tab-contents {
-    background-color: #F2F9FF;
-    }
-    .content {
-    display: none;
-    }
-    .content.is-display {
-    display: block;
-    }
-    .cource, .purpose{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 20px 0;
-    row-gap: 20px;
-    }
-    .dli-arrow-right {
-    display: inline-block;
-    vertical-align: middle;
-    color: #005BAC;
-    position: relative;
-    width: 1em;
-    height: 0.1em;
-    background: currentColor;
-    line-height: 1;
-    margin-right: 10px;
-    }
-    .dli-arrow-right::before {
-    content: '';
-    width: 0.65em;
-    height: 0.65em;
-    border: 0.1em solid currentColor;
-    border-left: 0;
-    border-bottom: 0;
-    transform: rotate(45deg);
-    transform-origin: top right;
-    position: absolute;
-    top: 50%;
-    right: -0.05em;
-    box-sizing: border-box;
-    }
-    
 /*section03*/
 #section03 table {
 margin: 0 10px;
@@ -491,7 +423,6 @@ font-size: 1.0em;
 /*よくあるご質問・お近くの教室を探す*/
 .qa_classroomsFt{
 display: block;
-    position: relative;
 }
 .qaFt,.classroomsFt{
 width: 100%;
@@ -500,19 +431,16 @@ width: 100%;
 width: 100%;
 }
 .qa_classroomsFt .qa_text{
-    position: absolute;
-    top: 45%;
-    left: 15%;
-    color: #fff;
 font-size: 1.6em;
+top: 15%;
+left: 25%;
 }
 .qa_classroomsFt .classrooms_text{
-    position: absolute;
-    top: 45%;
-    right: 10%;
 font-size: 1.6em;
+top: 70%;
+right: 20%;
 }
-    
+
 /*footer*/
 .footer p{
 font-size: 0.8em;

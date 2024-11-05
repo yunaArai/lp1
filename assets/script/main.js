@@ -16,4 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 }, false);
 
+// ドロワーメニューの操作
+const menuButton = document.getElementById('menu-btn');
+const drawerMenu = document.getElementById('drawer-menu');
+
+// メニューを開閉する処理
+menuButton.addEventListener('click', () => {
+drawerMenu.classList.toggle('open');
+});
 
