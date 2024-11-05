@@ -63,7 +63,6 @@ height: 61px;
 width: 282px;
 background-image: linear-gradient(90deg, #0271E0, #53A2F0);
 border: none;
-
 }
 .applybtn:hover {
 opacity: 0.6 ;
@@ -75,49 +74,68 @@ padding-bottom: 50px;
 transform: scale(1.2,1.2); 
 }
 /*ヘッダー*/
-.header{
-position: fixed;
-top: 0; 
-left: 0; 
-width: 100%; 
-height: 60px; 
-padding: 10px; 
-background-color: #fff;
-box-shadow: 0 1px 8px #787878;
-}
-.header_nav{
-display: flex;
-position: relative;
-}
-.header .nav{
-position: absolute;
-right: 0;
-padding-top: 15px;
-}
-.header ul{
-display: flex;
-gap:30px;
-}
-.header .nav__item{
-font-size: 1.4em;
-color:#333;
-}
-.header .applybtn {
-width: auto;
+.header .applybtn{
 height: auto;
-margin-top: -10px;
-padding: 10px;
+width: auto;
 }
-.header img{
-padding-top: 10px;
+header {
+    background-color: #333;
+    padding: 10px 20px;
 }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* ナビゲーションメニュー（PC版用） */
+  .nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .hamburger-menu span {
+    background-color: white;
+    width: 25px;
+    height: 3px;
+  }
 
 /*メインビジュアル*/
 main{
 padding-top: 60px;
 }
 .main_visual{
-background-image: url(../image/mainVIsual_pc.jpg);
+background-image: url(../image/mainVIsual_pc.jpg) ;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
 height: 650px;
 }
 .frame:before {
@@ -150,7 +168,8 @@ margin: -26px auto;
 }
 .btnlist ul{
 display: flex;
-justify-content: space-between;
+justify-content: space-evenly;
+align-items: center;
 }
 .btnlist li{
 font-size: 1.4em;
@@ -349,7 +368,32 @@ height: 25px;
 }
 
 /*ドロワーメニュー*/
+/* ナビゲーションメニュー（SP版） */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 47px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 10px 0;
+  }
 
+  .nav-links li {
+    margin-left: 0;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* ハンバーガーメニュー表示 */
+  .hamburger-menu {
+    display: flex;
+  }
 
 /*メインビジュアル*/
 .main_visual{
