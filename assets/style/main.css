@@ -32,9 +32,6 @@ list-style:none;
 }
 
 /*共通*/
-.forSP {
-display: none;
-}
 p{
 font-size:1.4em;
 color: #333;
@@ -55,7 +52,7 @@ font-size: 150%;
 width: 1200px;
 margin: 0 auto;
 }
-.applybtn{
+.apply .applybtn {
 font-size: 1.4em;
 color:#fff;
 border-radius: 100vh;
@@ -73,76 +70,74 @@ padding-bottom: 50px;
 .scale-img:hover {
 transform: scale(1.2,1.2); 
 }
+
 /*ヘッダー*/
+.header .dli-arrow-right{
+color: #fff;
+}
 .header .applybtn{
 height: auto;
 width: auto;
+padding: 5px 15px;
+font-size: 1.4em;
+color:#fff;
+border-radius: 100vh;
+background: linear-gradient(90deg, #0271E0, #53A2F0);
+border: none;
 }
-header {
-    background-color: #333;
-    padding: 10px 20px;
+.header {
+background-color: #fff;
+padding: 10px 20px;
+border-bottom: 2px solid #ccc;
+position: sticky;
+top: 0;
+}
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logo a {
+color: #005BAC;
+text-decoration: none;
+font-size: 1.8em;
+font-weight: bold;
 }
   
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  /* ナビゲーションメニュー（PC版用） */
-  .nav-links {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-links li {
-    margin-left: 20px;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
-  .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-  }
-  
-  .hamburger-menu span {
-    background-color: white;
-    width: 25px;
-    height: 3px;
-  }
+/* ナビゲーションメニュー */
+.nav-links {
+display: flex;
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+.nav-links li {
+margin-left: 20px;
+}
+.nav-links .nav_item {
+color: #333;
+font-size: 1.4em;
+margin-top: 5px;
+}
+.hamburger-menu {
+display: none;
+flex-direction: column;
+cursor: pointer;
+gap: 5px;
+}
+.hamburger-menu span {
+background-color: #fff;
+width: 25px;
+height: 3px;
+}
 
 /*メインビジュアル*/
-main{
-padding-top: 60px;
-}
 .main_visual{
 background-image: url(../image/mainVIsual_pc.jpg) ;
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
 height: 650px;
-}
-.frame:before {
-content: url(../image/frame-left.png);
-}
-.frame:after {
-content: url(../image/frame-right.png);
 }
 .frame{
 display: flex;
@@ -233,6 +228,15 @@ padding: 10px;
 font-weight: bold;
 font-size: 1.6em;
 text-align: center;
+border-radius: 10px 10px 0 0;
+background-color: #F0F0F0;
+color: #6E6E6E;
+}
+.tab-01{
+margin-right: 10px;
+}
+.tab-02{
+margin-left: 10px;
 }
 .tab-contents {
 background-color: #F2F9FF;
@@ -347,74 +351,89 @@ padding: 20px 0 10px;
 width: 100%;
 margin: auto 10px;
 }
-.applybtn{
+.apply .applybtn{
 font-size: 1.4em;
 width: 70%;
 }
 img{
 width: 100%;
 }
+
 /*ヘッダー*/
 .header{
-height: 40px; 
+padding: 10px 0;
 }
-
-.header li a{
-font-size: 1.2em;
+.header .applybtn{
+background: #fff;
+color: #005BAC;
+margin: 20px 0 10px;
+font-size: 1.4em;
+text-align: center;
+border-radius: 25px;
 }
-
-.header img{
-height: 25px;
+.logo a {
+font-size: 1.4em;
 }
 
 /*ドロワーメニュー*/
-/* ナビゲーションメニュー（SP版） */
 .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 47px;
-    left: 0;
-    background-color: #333;
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .nav-links li {
-    margin-left: 0;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  /* ハンバーガーメニュー表示 */
-  .hamburger-menu {
-    display: flex;
-  }
+display: none;
+flex-direction: column;
+position: absolute;
+top: 54px;
+right: 0;
+background-color: #005BAC;
+width: 80%;
+padding: 10px 0;
+}
+.nav-links .nav_item {
+color: #fff;
+border-bottom: 3px solid #fff;
+}
+.nav-links li {
+margin-left: 0;
+text-align: left;
+padding: 10px;
+}
+.nav-links.active {
+display: flex;
+padding: 10px;
+}
+.hamburger-menu {
+display: flex;
+}
+.hamburgerArea{
+position: fixed;
+top: 0;
+right: 0;
+background-color: #005BAC;
+color: white;
+padding: 18px;
+z-index: 1000;
+}
 
 /*メインビジュアル*/
 .main_visual{
 background-image: url(../image/mainVIsual_sp.jpg);
 height: 250px;
-}
-.frame:before,.frame:after {
-transform: scale(0.5);
+position: relative;
 }
 .frame{
-width: 55%;
-padding: 0;
-margin-left: -10px;
+position: initial;
+padding: 30px 0 0;
+}
+.frame img{
+width: auto;
+height: 80px;
 }
 .frame p{
-padding: 50px 0 0;
+padding: 15px 0 0;
 font-size: 0.6em;
+white-space: nowrap;
 }
 .subtitie{
 font-size: 1.0em;
-margin-top: -35px;
+position: initial;
 }
 .frame .point{
 font-size: 1.8em;
@@ -422,6 +441,7 @@ font-size: 1.8em;
 .main_visual h1{
 font-size: 1.6em;
 line-height: 1;
+position: initial;
 }
 .btnlist{
 width: 100%;
