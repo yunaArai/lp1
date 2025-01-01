@@ -102,7 +102,7 @@ margin-left: 20px;
 .header {
 background-color: #fff;
 padding: 15px 0;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 position: sticky;
 top: 0;
 }
@@ -582,7 +582,7 @@ margin: 0 auto;
 }
 #section03 th, #section03 td {
 font-size: 1.0em;
-} 
+}
 
 /*よくあるご質問・お近くの教室を探す*/
 .foot__container {
