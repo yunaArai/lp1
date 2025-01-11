@@ -3,7 +3,7 @@
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
+del, dfn, em, ins, kbd, q, samp,
 small, strong, sub, sup, var,
 b, i,
 dl, dt, dd, ol, ul, li,
@@ -20,8 +20,15 @@ font-size:100%;
 vertical-align:baseline;
 background:transparent;
 }
+img{
+vertical-align: top;
+margin:0;
+padding:0;
+height: auto;
+}
 a {
 text-decoration: none;
+color: inherit;
 }
 a:hover {
 opacity: 0.6 ;
@@ -29,13 +36,13 @@ opacity: 0.6 ;
 li{
 list-style:none;
 }
+body{
+font-family: 'Noto Sans Japanese', sans-serif;
+}
 
 /*共通*/
-.forSP {
-display: none;
-}
 p{
-font-size:1.4em;
+font-size:1.0em;
 color: #333;
 }
 h2{
@@ -46,119 +53,139 @@ padding: 80px 0 20px;
 .point{
 color: #F11F8D;
 font-weight: bold;
+font-family: Poppins;
+font-style: italic;
 }
 .point span{
 font-size: 150%;
 }
 .inner{
-width: 1200px;
+max-width: 1200px;
 margin: 0 auto;
 }
-.applybtn{
-font-size: 1.4em;
+.apply .applybtn {
+font-size: 1.2em;
 color:#fff;
 border-radius: 100vh;
-height: 61px;
-width: 282px;
+height: 75px;
+width: 360px;
 background-image: linear-gradient(90deg, #0271E0, #53A2F0);
 border: none;
-
+font-weight: bold;
 }
 .applybtn:hover {
 opacity: 0.6 ;
+}
+.cta__area{
+display: flex;
+gap: 20px;
 }
 #section01, #section02, #section03{
 padding-bottom: 50px;
 }
 
 /*ヘッダー*/
-.header{
-position: fixed;
-top: 0; 
-left: 0; 
-width: 100%; 
-height: 60px; 
-padding: 10px; 
-background-color: #fff;
-box-shadow: 0 1px 8px #787878;
+.header .dli-arrow-right{
+color: #fff;
 }
-.header_nav{
-display: flex;
-position: relative;
-}
-.header .nav{
-position: absolute;
-right: 0;
-padding-top: 15px;
-}
-.header ul{
-display: flex;
-gap:30px;
-}
-.header li a{
-font-size: 1.4em;
-color:#333;
-}
-.header .nav_toggle{
-
-}
-.header .applybtn {
-width: auto;
+.header .applybtn{
 height: auto;
-margin-top: -10px;
-padding: 10px;
+width: auto;
+padding: 10px 20px;
+font-size: 1.0em;
+color:#fff;
+border-radius: 100vh;
+background: linear-gradient(90deg, #0271E0, #53A2F0);
+border: none;
+margin-left: 20px;
 }
-.header img{
-padding-top: 10px;
+.header {
+background-color: #fff;
+padding: 15px 0;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+position: sticky;
+top: 0;
+}
+.navbar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.logo a {
+color: #005BAC;
+text-decoration: none;
+font-size: 1.6em;
+font-weight: bold;
+font-family: Poppins;
+}
+/* ナビゲーションメニュー */
+.nav-links {
+display: flex;
+align-items: center;
+list-style-type: none;
+margin: 0;
+padding: 0;
+gap: 10px;
+}
+.nav-links .nav_item {
+color: #333;
+font-size: 1.0em;
+}
+.hamburger-menu {
+display: none;
+flex-direction: column;
+cursor: pointer;
+gap: 5px;
+}
+.hamburger-menu span {
+background-color: #fff;
+width: 25px;
+height: 3px;
 }
 
 /*メインビジュアル*/
-main{
-padding-top: 60px;
-}
-.main_visual{
-background-image: url(../image/mainVIsual_pc.jpg);
-height: 650px;
-}
-.frame:before {
-content: url(../image/frame-left.png);
-}
-.frame:after {
-content: url(../image/frame-right.png);
+.main__visual{
+background-image: url(../image/mainVIsual_pc.jpg) ;
+background-repeat: no-repeat;
+background-position: top;
+height: 651px;
 }
 .frame{
 display: flex;
 padding: 100px 0 20px;
 text-align: center;
+align-items: center;
 }
 .frame p{
 padding: 10px;
 }
 .subtitie{
-font-size: 2.0em;
+font-size: 1.6em;
 }
 .frame .point{
-font-size: 2.0em;
+font-size: 2.7em;
 }
-.main_visual h1{
+.main__visual h1{
 color: #005BAC;
-font-size: 4.0em;
+font-size: 3.0em;
 }
 .btnlist{
-width: 1200px;
+max-width: 1200px;
 margin: -26px auto;
 }
 .btnlist ul{
 display: flex;
-justify-content: space-between;
+justify-content: space-evenly;
+align-items: center;
 }
 .btnlist li{
-font-size: 1.4em;
+font-size: 1.2em;
 color:#fff;
 border-radius: 100vh;
-padding:10px;
-width: 340px;
+padding:20px;
+width: 320px;
 text-align: center;
+font-weight: bold;
 }
 .btnlist li:first-child{
 background-color: #77CB33;
@@ -176,8 +203,8 @@ opacity: 0.6 ;
 /*section01*/
 #section01 .reason,#section01 .reason2{
 display: flex;
-gap: 20px;
-padding-bottom: 20px;
+gap: 30px;
+padding-bottom: 30px;
 }
 #section01 .reason:last-child{
 padding-bottom: 0;
@@ -186,20 +213,32 @@ padding-bottom: 0;
 width: 50%;
 }
 #section01 h3 {
-font-size: 1.8em;
+font-size: 1.4em;
 }
-
+#section01 .reason p,#section01 .reason2 p{
+padding-top: 10px;
+}
 /*入学説明会に申し込む*/
 .apply{
+display: flex;
+flex-direction: column;
+align-items: center;
 background-color: #FFEDED;
-text-align: center;
 padding: 50px 0;
 }
 .apply p{
 padding-bottom: 20px;
 }
-
+.apply .applybtn{
+display: flex;
+align-items: center;
+justify-content: center;
+}
 /*section02*/
+.tab__inner{
+max-width: 1160px;
+margin: 0 auto;
+}
 .tab-button {
 display: flex;
 justify-content: space-between;
@@ -212,11 +251,32 @@ color: #333;
 width: calc(100% / 2);
 padding: 10px;
 font-weight: bold;
-font-size: 1.6em;
+font-size: 1.2em;
 text-align: center;
+border-radius: 10px 10px 0 0;
+background-color: #F0F0F0;
+color: #6E6E6E;
 }
-.tab-contents {
+.tab-01{
+margin-right: 16px;
+}
+.tab-02{
+margin-left: 16px;
+}
+.tab__content {
 background-color: #F2F9FF;
+}
+.area__img{
+width:532px;
+overflow:hidden;
+border-radius: 10px;
+}
+.area__img img{
+transition:1s all;
+}
+.area__img img:hover{
+transform:scale(1.2,1.2);
+transition:1s all;
 }
 .content {
 display: none;
@@ -230,6 +290,10 @@ justify-content: space-evenly;
 flex-wrap: wrap;
 padding: 20px 0;
 row-gap: 20px;
+}
+.cource p{
+font-weight: bold;
+padding-top: 10px;
 }
 .dli-arrow-right {
 display: inline-block;
@@ -261,258 +325,273 @@ box-sizing: border-box;
 #section03 table {
 border-collapse: collapse;
 margin: 0 auto;
+border: solid 3px #ccc;
 }
 #section03 th, #section03 td {
-border: solid 1px #707070;
-padding: 10px;
-font-size: 1.2em;
+border: solid 1px #ccc;
+font-size: 1.0em;
 text-align: center;
+}
+#section03 td {
+padding: 10px;
 }
 #section03 th {
 font-weight: normal;
 background-color: #F5F5F5;
-width: 141px;
+width: 100px;
+padding: 15px;
 }
 #section03 th:last-child {
-width: 452px;
+width: 400px;
+}
+#section03 .point {
+font-style: normal;
 }
 
+
 /*よくあるご質問・お近くの教室を探す*/
-.qa_classroomsFt{
+.foot__container {
 display: flex;
+}
+.faq__area,.search__area {
+overflow: hidden;
+width: 50%;
 position: relative;
 }
-.qaFt,.classroomsFt{
-width: 50%;
+.faq__area img,.search__area img {
+transition:1s all;
+width: 100%;
 }
-.qa_classroomsFt .qa_text{
-position: absolute;
-top: 45%;
-left: 15%;
-color: #fff;
-font-size: 1.8em;
+.faq__area:hover img ,.search__area:hover img  {
+transform:scale(1.2,1.2);
+transition:1s all;
 }
-.qa_classroomsFt .classrooms_text{
-position: absolute;
-top: 45%;
-right: 10%;
+.faq__area p ,.search__area p {
+align-items: center;
+bottom: 0;
 color: #fff;
-font-size: 1.8em;
+display: flex;
+justify-content: center;
+left: 0;
+margin: auto;
+position: absolute;
+right: 0;
+top: 0;
 }
 
 /*footer*/
 .footer{
 background-color: #DDD;
-padding: 20px;
+padding: 40px;
 }
 .footer p{
-font-size: 1.0em;
+font-size: .6em;
 text-align: center;
+font-family: Poppins;
 }
 
 /*sp
-S----------------------*/
-@media screen and (max-width:768px) {
+----------------------*/
+@media screen and (max-width:767px) {
 /*共通*/
 .forPC {
 display: none;
 }
 p{
-font-size:1.2em;
+font-size:.9em;
 }
 h2{
-font-size: 1.8em;
+font-size: 1.4em;
 padding: 20px 0 10px;
 }
 .inner{
 width: 100%;
-margin: auto 10px;
 }
-.applybtn{
-font-size: 1.4em;
-    border-radius: 100vh;
-    height: 61px;
-width: 70%;
-    background-image: linear-gradient(90deg, #0271E0, #53A2F0);
-    border: none;
-    
-    }
-    .applybtn:hover {
-    opacity: 0.6 ;
-    }
-    #section01, #section02, #section03{
-    padding-bottom: 50px;
-    }
+img{
+width: 100%;
+}
+
 /*ヘッダー*/
 .header{
-
-height: 40px; 
-
-    }
-
-.header li a{
-font-size: 1.2em;
+padding: 10px 0;
 }
-
-.header img{
-height: 25px;
+.header .applybtn{
+background: #fff;
+color: #005BAC;
+margin: 10px 0;
+text-align: center;
+border-radius: 25px;
+font-weight: bold;
+}
+.logo a {
+font-size: 1.4em;
+padding-left: 15px;
 }
 
 /*ドロワーメニュー*/
-
+.nav-links {
+display: none;
+flex-direction: column;
+position: absolute;
+top: 53px;
+right: 0;
+background-color: #005BAC;
+width: 80%;
+padding: 10px 0;
+}
+.nav-links .nav_item {
+color: #fff;
+border-bottom: 0.5px solid #fff;
+}
+.nav-links li {
+margin-left: 0;
+text-align: left;
+padding: 5px 0 15px;
+}
+.nav-links.active {
+display: flex;
+padding: 10px 15px;
+align-items: stretch;
+}
+.hamburger-menu {
+display: flex;
+}
+.hamburgerArea{
+position: fixed;
+top: 0;
+right: 0;
+background-color: #005BAC;
+color: white;
+padding: 18px;
+z-index: 1000;
+}
 
 /*メインビジュアル*/
-.main_visual{
-background-image: url(../image/mainVIsual_sp.jpg);
-height: 250px;
+.main__visual{
+background-image:url(../image/mainVIsual_sp.jpg);
+background-size:cover;
+height: auto;
+aspect-ratio: 3 / 2;
 }
-.frame:before,.frame:after {
-transform: scale(0.5);
+.main__text{
+padding-left: 15px;
 }
 .frame{
-width: 55%;
-padding: 0;
-margin-left: -10px;
+position: initial;
+padding: 30px 0 0;
+}
+.frame img{
+width: auto;
+height: 80px;
 }
 .frame p{
-padding: 50px 0 0;
-font-size: 0.6em;
+padding: 15px 0 0;
+font-size: .6em;
+white-space: nowrap;
 }
 .subtitie{
 font-size: 1.0em;
-margin-top: -35px;
+position: initial;
 }
 .frame .point{
 font-size: 1.8em;
 }
-.main_visual h1{
+.main__visual h1{
 font-size: 1.6em;
 line-height: 1;
+position: initial;
 }
 .btnlist{
-width: 100%;
+width: 70%;
 margin: 10px auto;
 }
 .btnlist ul{
-display: grid;
-justify-content: center;
+display: flex;
+flex-direction: column;
 gap: 10px;
 }
 .btnlist li{
-font-size: 1.2em;
-width: 100%;
+font-size: .9em;
+width: 90%;
+max-width: 360px;
+height: 20px;
 }
 
 /*section01*/
 #section01 .reason{
 display: block;
+padding: 0 15px;
 }
 #section01 .reason2{
 display: flex;
 flex-direction: column-reverse;
+padding: 0 15px;
 }
 #section01 .reason img,#section01 .reason .text,#section01 .reason2 img,#section01 .reason2 .text{
 width: 100%;
 }
 #section01 h3 {
-font-size: 1.6em;
+font-size: 1.2em;
 }
-    
-    /*入学説明会に申し込む*/
-    .apply{
-    background-color: #FFEDED;
-    text-align: center;
-    padding: 50px 0;
-    }
-    .apply p{
-    padding-bottom: 20px;
-    }
-    
+#section01 .reason, #section01 .reason2 {
+gap: 0;
+}
+#section01 p {
+padding: 20px 0;
+}
+
+/*入学説明会に申し込む*/
+.apply{
+padding: 30px;
+}
+.apply p {
+padding-bottom: 10px;
+text-align: center;
+}
+.apply .applybtn{
+font-size: 1.1em;
+height: 60px;
+max-width: 360px;
+width: auto;
+padding: 0 30px;
+}
+.cta__area{
+flex-direction: column;
+gap: 10px;
+}
+
 /*section02*/
-    .tab-button {
-    display: flex;
-    justify-content: space-between;
-    }
 .tab {
-    width: calc(100% / 2);
-    padding: 10px;
-font-size: 1.4em;
+font-size: .9em;
 }
-    .tab-contents {
-    background-color: #F2F9FF;
-    }
-    .content {
-    display: none;
-    }
-    .content.is-display {
-    display: block;
-    }
-    .cource, .purpose{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 20px 0;
-    row-gap: 20px;
-    }
-    .dli-arrow-right {
-    display: inline-block;
-    vertical-align: middle;
-    color: #005BAC;
-    position: relative;
-    width: 1em;
-    height: 0.1em;
-    background: currentColor;
-    line-height: 1;
-    margin-right: 10px;
-    }
-    .dli-arrow-right::before {
-    content: '';
-    width: 0.65em;
-    height: 0.65em;
-    border: 0.1em solid currentColor;
-    border-left: 0;
-    border-bottom: 0;
-    transform: rotate(45deg);
-    transform-origin: top right;
-    position: absolute;
-    top: 50%;
-    right: -0.05em;
-    box-sizing: border-box;
-    }
-    
+.area__img{
+width: auto;
+}
+.tab-button{
+padding: 0 15px;
+}
+.content.is-display {
+padding: 0 15px;
+}
 /*section03*/
-#section03 table {
+#section03 .tb-wrap {
 margin: 0 10px;
+}
+#section03 table {
+margin: 0 auto;
 }
 #section03 th, #section03 td {
 font-size: 1.0em;
-} 
+}
 
 /*よくあるご質問・お近くの教室を探す*/
-.qa_classroomsFt{
-display: block;
-    position: relative;
+.foot__container {
+flex-direction: column;
 }
-.qaFt,.classroomsFt{
+.faq__area,.search__area {
 width: 100%;
 }
-.qa_classroomsFt img {
-width: 100%;
-}
-.qa_classroomsFt .qa_text{
-    position: absolute;
-    top: 45%;
-    left: 15%;
-    color: #fff;
-font-size: 1.6em;
-}
-.qa_classroomsFt .classrooms_text{
-    position: absolute;
-    top: 45%;
-    right: 10%;
-font-size: 1.6em;
-}
-    
+
 /*footer*/
 .footer p{
 font-size: 0.8em;
